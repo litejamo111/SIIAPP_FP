@@ -1,0 +1,9 @@
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+pyinstaller --onefile --specpath=. SIIAPP_FP.py // crear el archivo .specpath
+pyinstaller --onedir --specpath=. SIIAPP_FP.py // crear el archivo .specpath
+
+pyinstaller SIIAPP_FP.spec //crear el .exe 
+
+hiddenimports=['tkinter', 'tkinter.messagebox', 'tkinter.ttk', 'customtkinter', 'pyodbc', 'tksheet', 'datetime', 'logging']
